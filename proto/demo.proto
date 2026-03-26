@@ -1,0 +1,37 @@
+syntax = "proto3";
+
+package demo;
+
+option go_package = "../src/product-service;productservice";
+
+service ProductService {
+  rpc ListProducts (Empty) returns (ProductList);
+}
+
+service PaymentService {
+  rpc Charge (PaymentRequest) returns (PaymentResponse);
+}
+
+
+message Empty {}
+
+message Product {
+  int32 id = 1;
+  string name = 2;
+  string category = 3;
+  int32 price = 4;
+  string image = 5;
+}
+
+message ProductList {
+  repeated Product products = 1;
+}
+
+message PaymentRequest {
+  int32 amount = 1;
+}
+
+message PaymentResponse {
+  string status = 1;
+}
+

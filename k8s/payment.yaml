@@ -1,0 +1,38 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: payment-service
+  labels:
+    app: payment
+spec:
+  type: ClusterIP
+  selector:
+    app: payment
+  ports:
+    - name: grcp #grcp - http
+      port: 50052
+      targetPort: 50052
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: payment-deployment
+  labels:
+    app: payment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: payment
+  template:
+    metadata:
+      labels:
+        app: payment
+    spec:
+      #serviceAccountName: demo-service-account ; it is using default service account;
+      containers:
+        - name: payment
+          image: alobach3/payment:latest
+          ports:
+            - containerPort: 50052

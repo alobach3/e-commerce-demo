@@ -1,0 +1,12 @@
+FROM node:24-alpine AS builder
+
+WORKDIR /app
+
+COPY . . 
+
+RUN npm install \
+    && npm install react-router-dom
+
+#EXPOSE 3000
+
+ENTRYPOINT ["npm", "start"]

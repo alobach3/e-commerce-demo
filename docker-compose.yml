@@ -1,0 +1,47 @@
+version: '3.8'
+services:
+  product-service:
+    build: ./src/product-service
+    ports:
+      - "50051:50051"
+    networks:
+      - ecommerce
+
+  payment:
+    build: ./src/payment
+    ports:
+      - "50052:50052"
+    networks:
+      - ecommerce
+
+  api-gateway:
+    build: ./src/api-gateway
+    ports:
+      - "8080:8080"
+    environment:
+      - PRODUCT_HOST=product-service
+      - PAYMENT_HOST=payment
+    depends_on:
+      - product-service
+      - payment
+    networks:
+      - ecommerce
+
+  frontend:
+    build: 
+      context: ./src/frontend
+      args:
+        REACT_APP_API_HOST: "http://localhost:8080" # for local testing without ingress
+    ports:
+      - "80:80"
+    environment:
+      - HOST=0.0.0.0
+      #- REACT_APP_API_HOST="http://localhost:8080"
+    depends_on:
+      - api-gateway
+    networks:
+      - ecommerce
+
+networks:
+  ecommerce:
+    driver: bridge

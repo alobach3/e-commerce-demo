@@ -1,0 +1,6 @@
+FROM golang:1.26 AS builder
+WORKDIR /app
+COPY . .
+RUN go mod tidy
+#EXPOSE 50051
+ENTRYPOINT ["go", "run", "main.go"]   

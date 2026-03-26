@@ -1,0 +1,38 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: product-service
+  labels:
+    app: product-service
+spec:
+  type: ClusterIP
+  selector:
+    app: product
+  ports:
+    - name: grcp #grcp - http
+      port: 50051
+      targetPort: 50051
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: product-service-deployment
+  labels:
+    app: product
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: product
+  template:
+    metadata:
+      labels:
+        app: product
+    spec:
+      #serviceAccountName: demo-service-account ; it is using default service account;
+      containers:
+        - name: product
+          image: alobach3/product-service:latest
+          ports:
+            - containerPort: 50051

@@ -1,0 +1,41 @@
+version: '3.8'
+services:
+  product-service:
+    build: ./src/product-service
+    ports:
+      - "50051:50051"
+    networks:
+      - ecommerce
+
+  payment:
+    build: ./src/payment
+    ports:
+      - "50052:50052"
+    networks:
+      - ecommerce
+
+  api-gateway:
+    build: ./src/api-gateway
+    ports:
+      - "8080:8080"
+    environment:
+      - PRODUCT_HOST=product-service
+      - PAYMENT_HOST=payment
+    depends_on:
+      - product-service
+      - payment
+    networks:
+      - ecommerce
+
+  frontend:
+    build: ./src/frontend
+    ports:
+      - "80:3000"
+    environment:
+      - HOST=0.0.0.0
+    networks:
+      - ecommerce
+
+networks:
+  ecommerce:
+    driver: bridge
