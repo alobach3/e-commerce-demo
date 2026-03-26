@@ -42,6 +42,12 @@ E-Commerce Demo
   <img src="https://github.com/alobach3/e-commerce-demo/blob/main/Architecture.png" width="900"/>
 </p>
 
+## Screenshots
+
+<p align="center">
+  <img src="https://github.com/alobach3/e-commerce-demo/blob/main/main_page.png" width="500"/>
+  <img src="https://github.com/alobach3/e-commerce-demo/blob/main/checkout.png" width="500"/>
+</p>
 
 ## Gettind Started - Docker Compose (Local)
 ```bash
