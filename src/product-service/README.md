@@ -39,7 +39,7 @@ protoc -I ../../proto --go_out=. --go_opt=paths=source_relative --go-grpc_out=. 
 ```
 Create new folder named "productservice" and add here generated files
 
-Run and Tes
+Run and Test
 ```bash
 go mod tidy
 go run main.go
