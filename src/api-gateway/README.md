@@ -22,7 +22,7 @@ docker-compose build api-gateway
 ```
 
 ## Generate protos locally
-Delete all files except app.py
+Delete all files except server.py
 
 Run from root directory
 ```bash
