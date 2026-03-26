@@ -87,4 +87,23 @@ kubectl get svc -n ingress-nginx
 - Add external Ip in etc/hosts. For Windows: C:\Windows\System32\drivers\etc/hosts
 > Example: 
 > 127.0.0.1 myapp.local
-- Webpage should be available under link http://myapp.local 
+- Webpage should be available under link http://myapp.local
+
+## Planned Improvements
+
+I plan to extend the project with the following:
+
+- CI/CD workflow
+  - GitHub Actions CI pipeline per service: lint → test → build → push image (docker)
+  - GitOps workflow: ArgoCD in Minikube 
+
+- Infrastructure as Code
+  - `terraform/` to provision AKS
+    
+- Kubernetes production readiness
+  - Helm charts for each service
+  - `livenessProbe` / `readinessProbe`, resource `requests/limits`
+
+- Observability & Security
+  - Monitoring: Prometheus + Grafana dashboards
+  - Centralized logs: Loki or ELK
