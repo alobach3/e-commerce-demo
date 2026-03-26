@@ -1,6 +1,29 @@
-# Getting Started with Create React App
+# React Frontend Service
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Local service run in development mode
+From PowerShell
+```bash
+npm install
+npm install react-router-dom
+$env:PRODUCT_HOST="127.0.0.1"
+$env:PAYMENT_HOST="127.0.0.1"
+$env:REACT_APP_API_HOST="http://localhost:8080"; npm start
+```
+Open [http://localhost:3000](http://localhost:3000) to view service in the browser
+<p align="center">
+  <img src="[https://github.com/alobach3/e-commerce-demo/blob/main/main_page.png](https://github.com/alobach3/e-commerce-demo/blob/main/main_page.png)" width="300"/>
+  <img src="[https://github.com/alobach3/e-commerce-demo/blob/main/checkout.png](https://github.com/alobach3/e-commerce-demo/blob/main/checkout.png)" width="300"/>
+</p>
+https://github.com/alobach3/e-commerce-demo/blob/main/checkout.png
+
+
+##Docker Build
+Run from root directory
+```bash
+docker-compose build frontend
+```
 
 ## Available Scripts
 
@@ -39,27 +62,7 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+##https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
 ### Deployment
 
