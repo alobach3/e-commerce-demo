@@ -1,3 +1,4 @@
+[![product service CI](https://github.com/alobach3/e-commerce-demo/actions/workflows/product-service-CI.yml/badge.svg?branch=main)](https://github.com/alobach3/e-commerce-demo/actions/workflows/product-service-CI.yml)
 # E-COMMERCE DEMO
 
 A simple e-commerce demo project for learning and showcasing DevOps practices. 
