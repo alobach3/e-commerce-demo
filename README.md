@@ -1,14 +1,15 @@
 # E-COMMERCE DEMO
-> A simple e-commerce demo project for learning and showcasing DevOps practices. 
-> This project demonstrates 4 simple microservices using gRPC framework for fast communication between backend services.
-
+```text
+A simple e-commerce demo project for learning and showcasing DevOps practices. 
+This project demonstrates 4 simple microservices using gRPC framework for fast communication between backend services.
+```
 ---
 
 ## TECH STACK
-- **Frontend:** React.js [frontend](https://github.com/alobach3/e-commerce-demo/tree/main/src/frontend)
-- **API-GATEWAY:** Flask [api-gateway](https://github.com/alobach3/e-commerce-demo/tree/main/src/api-gateway)
-- **Payment service:** Python [payment](https://github.com/alobach3/e-commerce-demo/tree/main/src/payment)
-- **Product service:** Go [product-service](https://github.com/alobach3/e-commerce-demo/tree/main/src/product-service)
+- **Frontend:** React.js [[frontend]](https://github.com/alobach3/e-commerce-demo/tree/main/src/frontend)
+- **API-GATEWAY:** Flask [[api-gateway]](https://github.com/alobach3/e-commerce-demo/tree/main/src/api-gateway)
+- **Payment service:** Python [[payment]](https://github.com/alobach3/e-commerce-demo/tree/main/src/payment)
+- **Product service:** Go [[product-service]](https://github.com/alobach3/e-commerce-demo/tree/main/src/product-service)
 - **Infrastructure:** Docker, Docker Compose, Kubernetes
 - **CI/CD:** GitHub Actions
 
@@ -37,7 +38,13 @@ E-Commerce Demo
     └── product-service # Simple product service using gRPC
 
 ```
-[!Architecture](./Architecture.png)
+---
+
+## Architecture
+
+<p align="center">
+  <img src="https://github.com/alobach3/e-commerce-demo/blob/main/Architecture.png" width="700"/>
+</p>
 
 ---
 
