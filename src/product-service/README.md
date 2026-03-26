@@ -9,7 +9,7 @@ For Windows:
 ```bash
 go mod download
 go build -o product-service.exe main.go
-./product-service
+./product-service.exe
 ```
 For Linux
 ```bash
