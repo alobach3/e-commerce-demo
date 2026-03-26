@@ -12,14 +12,13 @@ $env:PAYMENT_HOST="127.0.0.1"
 $env:REACT_APP_API_HOST="http://localhost:8080"; npm start
 ```
 Open [http://localhost:3000](http://localhost:3000) to view service in the browser
+  
 <p align="center">
-  <img src="[https://github.com/alobach3/e-commerce-demo/blob/main/main_page.png](https://github.com/alobach3/e-commerce-demo/blob/main/main_page.png)" width="300"/>
-  <img src="[https://github.com/alobach3/e-commerce-demo/blob/main/checkout.png](https://github.com/alobach3/e-commerce-demo/blob/main/checkout.png)" width="300"/>
+  <img src="https://github.com/alobach3/e-commerce-demo/blob/main/main_page.png" width="300"/>
+  <img src="https://github.com/alobach3/e-commerce-demo/blob/main/checkout.png" width="300"/>
 </p>
-https://github.com/alobach3/e-commerce-demo/blob/main/checkout.png
 
-
-##Docker Build
+## Docker Build
 Run from root directory
 ```bash
 docker-compose build frontend
