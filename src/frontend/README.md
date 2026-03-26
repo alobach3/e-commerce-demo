@@ -3,6 +3,11 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Local service run in development mode
+Firstly run locally services:
+- [api-gateway](https://github.com/alobach3/e-commerce-demo/blob/main/src/api-gateway/README.md)
+- [payment](https://github.com/alobach3/e-commerce-demo/blob/main/src/payment/README.md)
+- [product-service](https://github.com/alobach3/e-commerce-demo/blob/main/src/product-service/README.md)
+
 From PowerShell
 ```bash
 npm install
