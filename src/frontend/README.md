@@ -14,8 +14,8 @@ $env:REACT_APP_API_HOST="http://localhost:8080"; npm start
 Open [http://localhost:3000](http://localhost:3000) to view service in the browser
   
 <p align="center">
-  <img src="https://github.com/alobach3/e-commerce-demo/blob/main/main_page.png" width="300"/>
-  <img src="https://github.com/alobach3/e-commerce-demo/blob/main/checkout.png" width="300"/>
+  <img src="https://github.com/alobach3/e-commerce-demo/blob/main/main_page.png" width="500"/>
+  <img src="https://github.com/alobach3/e-commerce-demo/blob/main/checkout.png" width="500"/>
 </p>
 
 ## Docker Build
