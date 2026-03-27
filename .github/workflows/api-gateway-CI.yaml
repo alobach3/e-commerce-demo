@@ -6,6 +6,9 @@ on:
     paths: [ "src/api-gateway/**" ]
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   deploy:
     uses: ./.github/workflows/deploy-template.yaml
