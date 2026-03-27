@@ -1,0 +1,18 @@
+name: payment CI
+
+on:
+  push:
+    branches: [ "main" ]
+    paths: [ "src/payment/**" ]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    uses: ./.github/workflows/deploy-template.yml
+    with:
+      service-name: payment
+      service-path: src/payment
+      k8s-manifest: k8s/payment.yaml
+    secrets:
+      DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+      DOCKER_TOKEN: ${{ secrets.DOCKER_TOKEN }}
