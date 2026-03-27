@@ -33,6 +33,6 @@ spec:
       #serviceAccountName: demo-service-account ; it is using default service account;
       containers:
         - name: product
-          image: alobach3/product-service-git:f5269dbaec6fee4cd284d01cc37ecb7d349748bb:latest
+          image: alobach3/product-service-git:f5269dbaec6fee4cd284d01cc37ecb7d349748bb
           ports:
             - containerPort: 50051
