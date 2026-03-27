@@ -1,1 +1,4 @@
-*.txt
+TODO.txt
+notes.txt
+k8s_notes.txt
+**/__pycache__/

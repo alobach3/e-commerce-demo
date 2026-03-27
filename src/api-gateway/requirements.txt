@@ -1,0 +1,6 @@
+Flask==2.3.3
+Flask-Cors==4.0.0
+requests==2.31.0  
+grpcio==1.59.0     # very importatnt to use this version, otherwise you will get an error when running the api gateway
+protobuf==4.23.3   # files were generated using this version, so it is important to use the same version to avoid compatibility issues
+grpcio-tools==1.59.0
