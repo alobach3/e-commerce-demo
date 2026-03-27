@@ -45,6 +45,7 @@ def pay():
     res = payment_client.Charge(demo_pb2.PaymentRequest(amount=data["amount"]))
     return jsonify({"status": res.status})
 
+# for test local purpose
 #if __name__ == "__main__":
 #    print("API Gateway running on http://localhost:8080")
 #    app.run(port=8080)
