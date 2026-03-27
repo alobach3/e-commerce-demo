@@ -9,10 +9,10 @@ class PaymentService(demo_pb2_grpc.PaymentServiceServicer):
 
     def Charge(self, request, context):
 
-        print("Processing payment:", request.amount)
+        print("Processing your payment:", request.amount)
 
         return demo_pb2.PaymentResponse(
-            status="payment successful"
+            status="Payment successful"
         )
 
 
