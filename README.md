@@ -100,7 +100,7 @@ I plan to extend the project with the following:
   - [ ] GitOps workflow: ArgoCD in AKS 
 
 - Infrastructure as Code
-  - [ ]`terraform/` to provision AKS
+  - [ ] `terraform/` to provision AKS
     
 - Kubernetes production readiness
   - [ ] Helm charts for each service
