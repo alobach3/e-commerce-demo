@@ -21,7 +21,7 @@ func (s *server) ListProducts(ctx context.Context, req *pb.Empty) (*pb.ProductLi
 		{Id: 2, Name: "Anime Figure 1/7", Category: "figure", Price: 67, Image: "https://via.placeholder.com/400x400"},
 		{Id: 3, Name: "Anime Keycap", Category: "keyboard", Price: 67, Image: "https://via.placeholder.com/400x400"},
 		{Id: 4, Name: "Anime Accessories", Category: "accessories", Price: 100, Image: "https://via.placeholder.com/400x400"},
-		{Id: 5, Name: "Abune Bundle", Category: "bundle", Price: 300, Image: "https://via.placeholder.com/400x400"},
+		{Id: 5, Name: "Anime Bundle", Category: "bundle", Price: 300, Image: "https://via.placeholder.com/400x400"},
 	}
 
 	return &pb.ProductList{Products: products}, nil
