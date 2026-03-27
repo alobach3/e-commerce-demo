@@ -94,17 +94,18 @@ kubectl get svc -n ingress-nginx
 I plan to extend the project with the following:
 
 - CI/CD workflow
-  - GitHub Actions CI pipeline per service: build and push image (docker)
-  - GitHub Actions CI pipeline per service: lint → test → build 
-  V GitOps workflow: ArgoCD in Minikube 
+  - [ ] GitHub Actions CI pipeline per service: build and push image (docker)
+  - [ ] GitHub Actions CI pipeline per service: lint → test → build 
+  - [ ] GitOps workflow: ArgoCD in Minikube
+  - [ ] GitOps workflow: ArgoCD in AKS 
 
 - Infrastructure as Code
-  - `terraform/` to provision AKS
+  - [ ]`terraform/` to provision AKS
     
 - Kubernetes production readiness
-  - Helm charts for each service
-  - `livenessProbe` / `readinessProbe`, resource `requests/limits`
+  - [ ] Helm charts for each service
+  - [ ] `livenessProbe` / `readinessProbe`, resource `requests/limits`
 
 - Observability & Security
-  - Monitoring: Prometheus + Grafana dashboards
-  - Centralized logs: Loki or ELK
+  - [ ] Monitoring: Prometheus + Grafana dashboards
+  - [ ] Centralized logs: Loki or ELK
