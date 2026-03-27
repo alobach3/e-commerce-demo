@@ -94,9 +94,9 @@ kubectl get svc -n ingress-nginx
 I plan to extend the project with the following:
 
 - CI/CD workflow
-  - [ ] GitHub Actions CI pipeline per service: build and push image (docker)
+  - [x] GitHub Actions CI pipeline per service: build and push image (docker)
   - [ ] GitHub Actions CI pipeline per service: lint → test → build 
-  - [ ] GitOps workflow: ArgoCD in Minikube
+  - [x] GitOps workflow: ArgoCD in Minikube
   - [ ] GitOps workflow: ArgoCD in AKS 
 
 - Infrastructure as Code
