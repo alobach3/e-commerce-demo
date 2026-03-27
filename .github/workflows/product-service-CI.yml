@@ -38,6 +38,7 @@ jobs:
 
   update-k8s:
     runs-on: ubuntu-latest
+    needs: docker-deploy
     steps:
       - name: Checkout code
         uses: actions/checkout@v6
