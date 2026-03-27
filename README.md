@@ -26,8 +26,7 @@ E-Commerce Demo
 ├── proto  # Protocol Buffers definitions for gRPC services
 │   └── demo.proto
 ├── .github
-│   └── workflows # CI for building and pushing docker images
-│       └── product-service-CI.yml # for product service
+│   └── workflows # CI for building and pushing docker images and update of k8s manifests for each service
 └── src
     ├── api-gateway # Gateway for HTTP->gRPC translation
     ├── frontend # Frontend Service 
