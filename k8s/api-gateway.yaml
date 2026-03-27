@@ -33,7 +33,7 @@ spec:
       #serviceAccountName: demo-service-account ; it is using default service account;
       containers:
         - name: api-gateway
-          image: alobach3/api-gateway:latest
+          image: alobach3/api-gateway-git:509f253a052bf7b8d7a8e2d7f980e151093cc66e
           ports:
             - containerPort: 8080
           env:
