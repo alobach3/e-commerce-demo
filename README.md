@@ -1,4 +1,4 @@
-[![product service CI](https://github.com/alobach3/e-commerce-demo/actions/workflows/product-service-CI.yml/badge.svg?branch=main)](https://github.com/alobach3/e-commerce-demo/actions/workflows/product-service-CI.yml)
+[![product service CI](https://github.com/alobach3/e-commerce-demo/actions/workflows/product-service-CI.yml/badge.svg?branch=main)](https://github.com/alobach3/e-commerce-demo/actions/workflows/product-service-CI.yml) [![api gateway CI](https://github.com/alobach3/e-commerce-demo/actions/workflows/api-gateway-CI.yml/badge.svg?branch=main)](https://github.com/alobach3/e-commerce-demo/actions/workflows/api-gateway-CI.yml) [![frontend CI](https://github.com/alobach3/e-commerce-demo/actions/workflows/frontend-CI.yml/badge.svg?branch=main)](https://github.com/alobach3/e-commerce-demo/actions/workflows/frontend-CI.yml) [![payment CI](https://github.com/alobach3/e-commerce-demo/actions/workflows/payment-CI.yml/badge.svg?branch=main)](https://github.com/alobach3/e-commerce-demo/actions/workflows/payment-CI.yml) 
 # E-COMMERCE DEMO
 
 A simple e-commerce demo project for learning and showcasing DevOps practices. 
