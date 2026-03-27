@@ -1,18 +1,22 @@
 name: product service CI
 
 on:
-  #push:
-    #branches: [ "main" ]
+  push:
+    branches: [ "main" ]
+    paths: 
+      - 'src/product-service/**'
   #pull_request:
     #branches: [ "main" ]
   workflow_dispatch: 
 
-jobs:
+permissions:
+  contents: write
 
-  docker:
+jobs:
+  docker-deploy:
     runs-on: ubuntu-latest
     steps:
-        - name: checkout code
+        - name: Checkout Code
           uses: actions/checkout@v6
 
         - name: Install Docker
@@ -24,10 +28,30 @@ jobs:
             username: ${{ secrets.DOCKER_USERNAME }}
             password: ${{ secrets.DOCKER_TOKEN }}
 
-        - name: Docker Push
+        - name: Docker Build and Push
           uses: docker/build-push-action@v7
           with:
             context: src/product-service
             file: src/product-service/Dockerfile
             push: true
             tags: ${{ secrets.DOCKER_USERNAME }}/product-service-git:${{github.sha}}
+
+  update-k8s:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Update image tag in k8s manifest
+        run: |
+          sed -i "s|image: ${{ secrets.DOCKER_USERNAME }}/product-service*|image: ${{ secrets.DOCKER_USERNAME }}/product-service-git:${{ github.sha }}|" k8s/product-service.yaml
+
+      - name: Commit and Push changes
+        uses: stefanzweifel/git-auto-commit-action@v7
+        with:
+            commit_message: "[CI]: update product-service image tag to ${{ github.sha }}"
+            branch: main
+            file_pattern: k8s/product-service.yaml #  File pattern used for `git add`.
+            
