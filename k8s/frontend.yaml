@@ -34,7 +34,7 @@ spec:
       #serviceAccountName: demo-service-account ; it is using default service account;
       containers:
         - name: frontend
-          image: alobach3/frontend:latest
+          image: alobach3/frontend-git:f7dfd1b3713982fe3cba44defbc9e7b950dfa605
           ports:
             - containerPort: 80
           env:
